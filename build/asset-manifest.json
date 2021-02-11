@@ -1,30 +1,30 @@
 {
   "files": {
-    "main.css": "/static/css/main.dc32ee5e.chunk.css",
-    "main.js": "/static/js/main.b42b24b7.chunk.js",
-    "main.js.map": "/static/js/main.b42b24b7.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.519ac2c7.js",
-    "runtime-main.js.map": "/static/js/runtime-main.519ac2c7.js.map",
-    "static/js/2.6b86ca83.chunk.js": "/static/js/2.6b86ca83.chunk.js",
-    "static/js/2.6b86ca83.chunk.js.map": "/static/js/2.6b86ca83.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.80f7d8ce2cfc842d9f617f493344fc8a.js": "/precache-manifest.80f7d8ce2cfc842d9f617f493344fc8a.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.dc32ee5e.chunk.css.map": "/static/css/main.dc32ee5e.chunk.css.map",
-    "static/js/2.6b86ca83.chunk.js.LICENSE.txt": "/static/js/2.6b86ca83.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/static/media/lasercorpsgrad.9f77e39e.ttf",
-    "static/media/cross-icon.465bb167.svg": "/static/media/cross-icon.465bb167.svg",
-    "static/media/SelectText.css": "/static/media/drop.883c8789.svg",
-    "static/media/gamepad-icon.0cd364ed.svg": "/static/media/gamepad-icon.0cd364ed.svg",
-    "static/media/home-icon.1578a34c.svg": "/static/media/home-icon.1578a34c.svg",
-    "static/media/keyboard-icon.9c1f9820.svg": "/static/media/keyboard-icon.9c1f9820.svg",
-    "static/media/person-icon.c589b8d1.svg": "/static/media/person-icon.c589b8d1.svg",
-    "static/media/App.css": "/static/media/reload-icon.7c71c1ab.svg"
+    "main.css": "/fast-fingers/static/css/main.defc5372.chunk.css",
+    "main.js": "/fast-fingers/static/js/main.5110a38e.chunk.js",
+    "main.js.map": "/fast-fingers/static/js/main.5110a38e.chunk.js.map",
+    "runtime-main.js": "/fast-fingers/static/js/runtime-main.dded97a4.js",
+    "runtime-main.js.map": "/fast-fingers/static/js/runtime-main.dded97a4.js.map",
+    "static/js/2.6b86ca83.chunk.js": "/fast-fingers/static/js/2.6b86ca83.chunk.js",
+    "static/js/2.6b86ca83.chunk.js.map": "/fast-fingers/static/js/2.6b86ca83.chunk.js.map",
+    "index.html": "/fast-fingers/index.html",
+    "precache-manifest.a24295e40540e0a9439fdf7df381088d.js": "/fast-fingers/precache-manifest.a24295e40540e0a9439fdf7df381088d.js",
+    "service-worker.js": "/fast-fingers/service-worker.js",
+    "static/css/main.defc5372.chunk.css.map": "/fast-fingers/static/css/main.defc5372.chunk.css.map",
+    "static/js/2.6b86ca83.chunk.js.LICENSE.txt": "/fast-fingers/static/js/2.6b86ca83.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/fast-fingers/static/media/lasercorpsgrad.9f77e39e.ttf",
+    "static/media/cross-icon.465bb167.svg": "/fast-fingers/static/media/cross-icon.465bb167.svg",
+    "static/media/SelectText.css": "/fast-fingers/static/media/drop.883c8789.svg",
+    "static/media/gamepad-icon.0cd364ed.svg": "/fast-fingers/static/media/gamepad-icon.0cd364ed.svg",
+    "static/media/home-icon.1578a34c.svg": "/fast-fingers/static/media/home-icon.1578a34c.svg",
+    "static/media/keyboard-icon.9c1f9820.svg": "/fast-fingers/static/media/keyboard-icon.9c1f9820.svg",
+    "static/media/person-icon.c589b8d1.svg": "/fast-fingers/static/media/person-icon.c589b8d1.svg",
+    "static/media/App.css": "/fast-fingers/static/media/reload-icon.7c71c1ab.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.519ac2c7.js",
+    "static/js/runtime-main.dded97a4.js",
     "static/js/2.6b86ca83.chunk.js",
-    "static/css/main.dc32ee5e.chunk.css",
-    "static/js/main.b42b24b7.chunk.js"
+    "static/css/main.defc5372.chunk.css",
+    "static/js/main.5110a38e.chunk.js"
   ]
 }
