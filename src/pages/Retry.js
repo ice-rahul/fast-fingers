@@ -1,23 +1,19 @@
+import { navigate } from 'hookrouter';
 import React from 'react';
 import { Header, Footer } from '../components';
 
-function Retry({ appData, name, difficulty, setAppData }) {
+function Retry({ playerName, difficulty }) {
+
+  const score = localStorage.getItem("gamescore");
+  const scoreBoard = localStorage.getItem("scores") != null ? JSON.parse(localStorage.getItem("scores")) : [];
 
   const playAgain = () => {
-    setAppData((prevValue) => {
-      return {
-        ...prevValue,
-        pageIndex: 1,
-        nameError: '',
-        selectError: '',
-        gameInput: '',
-      }
-    });
+    navigate(`/play/${playerName}/${difficulty}`);
   }
 
   const showScore = () => {
-    if (appData.score) {
-      const secondsElapsed = Number(appData.score).toFixed(2);
+    if (score) {
+      const secondsElapsed = Number(score).toFixed(2);
       const secondsToConvert = Math.floor(secondsElapsed);
       const milliSeconds = Math.floor((secondsElapsed - secondsToConvert) * 100);
       const minutes = Math.floor(secondsToConvert / 60);
@@ -28,11 +24,11 @@ function Retry({ appData, name, difficulty, setAppData }) {
   }
 
   return (
-    <div className="Thanks" style={{ display: appData.pageIndex === 2 ? "block" : "none" }}>
-      <Header userName={name} difficulty={difficulty} />
+    <div className="Thanks">
+      <Header playerName={playerName} difficulty={difficulty} />
       <div className="thanksBody">
-        <h1 className="finalGame">Score : Game {appData.gameScores ? appData.gameScores.length : 0}</h1>
-        <p className="finalScore">{appData.score ? showScore() : 0}</p>
+        <h1 className="finalGame">Score : Game {scoreBoard ? scoreBoard.length : 0}</h1>
+        <p className="finalScore">{score ? showScore() : 0}</p>
         <p className="highScore">{"New High Score"}</p>
         <p className="playAgain" onClick={playAgain}>Play Again</p>
       </div>

@@ -1,10 +1,8 @@
-import React, { useContext } from 'react';
-import { AppContext } from '../../components';
+import React from 'react';
 import './ScoreBoard.css';
 
 function ScoreBoard() {
-    const [appData,] = useContext(AppContext);
-    const scores = appData.gameScores ? appData.gameScores : [];
+    const scores = localStorage.getItem('scores') != null ? JSON.parse(localStorage.getItem('scores')) : [];
 
     const showScore = (score) => {
         const secondsElapsed = Number(score).toFixed(2);

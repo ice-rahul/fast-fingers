@@ -1,22 +1,20 @@
-import React, { useContext } from 'react';
-import { AppContext, PlayerIcon, GamePadIcon } from '../../components';
+import React from 'react';
+import { PlayerIcon, GamePadIcon } from '../../components';
 import './Header.css';
 
-function Header({ userName, difficulty }) {
-
-    const [appData,] = useContext(AppContext);
-
+function Header({ playerName, difficulty, score }) {
+    const gameScore = score ? score : localStorage.getItem("gamescore");
     return (
         <>
             <div className="headerRow">
                 <div className="sectionHalf">
                     <div className="sectionRow">
                         <PlayerIcon className="playerIcon" />
-                        <p className="iconTitle">{appData[userName] ? appData[userName] : ''}</p>
+                        <p className="iconTitle">{playerName ? playerName : ''}</p>
                     </div>
                     <div className="sectionRow">
                         <GamePadIcon className="playerIcon" />
-                        <p className="iconTitle">{appData[difficulty] ? `LEVEL : ${appData[difficulty]}` : ''}</p>
+                        <p className="iconTitle">{difficulty ? `LEVEL : ${difficulty}` : ''}</p>
                     </div>
                 </div>
                 <div className="sectionHalf alignRight">
@@ -24,7 +22,7 @@ function Header({ userName, difficulty }) {
                         <span className="titleHeader">fast fingers</span>
                     </div>
                     <div className="sectionRow">
-                        <p className="scoreTitle">SCORE : {Number(appData.score).toFixed(2)}</p>
+                        <p className="scoreTitle">SCORE : {  Number(gameScore).toFixed(2)  }</p>
                     </div>
                 </div>
             </div>
