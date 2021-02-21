@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5dbd66999d6297f53237c314812181d1",
+    "revision": "912ba38de5363d8d369c2829680dfa3e",
     "url": "/fast-fingers/index.html"
   },
   {
-    "revision": "2e5de0a9857e4ba08892",
+    "revision": "832bc81aec1c2f7ebf9c",
     "url": "/fast-fingers/static/css/main.ad08ae17.chunk.css"
   },
   {
-    "revision": "9f9409d516777864b39e",
-    "url": "/fast-fingers/static/js/2.ca101eae.chunk.js"
+    "revision": "cd8b3cc8994a8f22da7b",
+    "url": "/fast-fingers/static/js/2.47886f49.chunk.js"
   },
   {
-    "revision": "96d0ece7a4e0825a058acf042ca7527d",
-    "url": "/fast-fingers/static/js/2.ca101eae.chunk.js.LICENSE.txt"
+    "revision": "9b318b6fb13190fe82c0677e9264b3c7",
+    "url": "/fast-fingers/static/js/2.47886f49.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2e5de0a9857e4ba08892",
-    "url": "/fast-fingers/static/js/main.ec4a101d.chunk.js"
+    "revision": "832bc81aec1c2f7ebf9c",
+    "url": "/fast-fingers/static/js/main.4b7fadd7.chunk.js"
   },
   {
     "revision": "5641e1afe3c3ed46422e",

@@ -1,4 +1,5 @@
 import React, { useReducer } from 'react'
+import { useParams } from "react-router-dom";
 import { Header, Game, Footer, ScoreBoard } from '../components';
 
 function handleState(state, action){
@@ -17,7 +18,8 @@ function handleState(state, action){
   return {...state}
 }
 
-function Play({ playerName, difficulty }) {
+function Play() {
+  let { playerName, difficulty } = useParams();
   const [{level, score}, dispatch] = useReducer(handleState, {level: difficulty, score:0})
   return (
     <div className="Game">

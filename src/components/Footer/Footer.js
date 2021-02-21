@@ -1,12 +1,13 @@
-import { navigate, usePath } from 'hookrouter';
 import React from 'react';
+import { useHistory, useRouteMatch } from 'react-router-dom'
 import { CrossIcon, HomeIcon } from '../../components';
 import './Footer.css';
 
 function Footer({ leftButton }) {
-    const path = usePath();
+    const { url:path } = useRouteMatch();
+    const browserHistory = useHistory();
     const goToHome = () => {
-        navigate('/');
+        browserHistory.push('/');
     }
 
     const stopGame = () => {
@@ -18,12 +19,12 @@ function Footer({ leftButton }) {
         }
         gameScores.push(currentScore);
         localStorage.setItem("scores", JSON.stringify(gameScores));
-        navigate(`/retry/${path.split('/')[2]}/${path.split('/')[3]}`);
+        browserHistory.push(`/retry/${path.split('/')[2]}/${path.split('/')[3]}`);
     }
 
     const quitGame = () => {
         localStorage.removeItem("scores");
-        navigate('/');
+        browserHistory.push('/');
     }
 
     return (

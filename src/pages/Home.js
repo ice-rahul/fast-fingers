@@ -1,6 +1,6 @@
 import React, { useReducer } from "react";
 import { Logo, InputText, SelectText, DropDownList } from "../components";
-import { navigate } from 'hookrouter';
+import { useHistory } from 'react-router';
 
 function updateState(state, action) {
   switch (action.type) {
@@ -27,9 +27,10 @@ function updateState(state, action) {
 
 function Home() {
   const [{ name, difficulty, error }, dispatch] = useReducer(updateState, { difficulty: 'EASY' });
+  const browserHistory = useHistory();
   const startGame = () => {
     if (name && difficulty) {
-      navigate(`/play/${name}/${difficulty}`);
+      browserHistory.push(`/play/${name}/${difficulty}`);
     } else {
       dispatch({ type: 'error', value: 'Name cannot be left blank' });
     }

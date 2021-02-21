@@ -1,14 +1,16 @@
-import { navigate } from 'hookrouter';
+import { useParams, useHistory } from "react-router-dom";
 import React from 'react';
 import { Header, Footer } from '../components';
 
-function Retry({ playerName, difficulty }) {
-
+function Retry() {
+  const browserHistory = useHistory();
+  let { playerName, difficulty } = useParams();
   const score = localStorage.getItem("gamescore");
   const scoreBoard = localStorage.getItem("scores") != null ? JSON.parse(localStorage.getItem("scores")) : [];
 
   const playAgain = () => {
-    navigate(`/play/${playerName}/${difficulty}`);
+//    navigate(`/play/${playerName}/${difficulty}`);
+    browserHistory.push(`/play/${playerName}/${difficulty}`);
   }
 
   const showScore = () => {

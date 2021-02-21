@@ -1,5 +1,5 @@
-import { navigate, usePath } from 'hookrouter';
 import React, { useRef, useEffect, useReducer } from 'react';
+import { useHistory, useRouteMatch } from 'react-router-dom'
 import './Timer.css';
 
 const totalSize = 500;
@@ -25,7 +25,8 @@ function handleTime(state, action) {
 }
 
 function Timer({ seconds, onChange }) {
-    const path = usePath();
+    const { url:path } = useRouteMatch();
+    const browserHistory = useHistory();
     const [{ stepSize, status, timeLeft }, dispatch] = useReducer(handleTime, { stepSize: 0, status: totalSize, timeLeft: seconds });
     const gameScore = useRef(0);
     const displayTime = () => {
@@ -51,7 +52,7 @@ function Timer({ seconds, onChange }) {
         }
         gameScores.push(currentScore);
         localStorage.setItem("scores", JSON.stringify(gameScores));
-        navigate(`/retry/${path.split('/')[2]}/${path.split('/')[3]}`);
+        browserHistory.push(`/retry/${path.split('/')[2]}/${path.split('/')[3]}`);
     }
 
     useEffect(() => {
